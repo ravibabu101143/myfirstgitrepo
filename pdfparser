@@ -1,5 +1,37 @@
 public Pdfdataparser (File fileJSON){
  this.fileJSON = fileJSON;
+public LinkedHashMap<String,String> parse(List<String> pdfdoc, String nodeName) throws JsonProcessingException, IOException
+{
 
+LinkedHashMap<String, String> mapforCSV = new LinkedHashMap<>();
+
+
+ObjectMapper objectMapper = new ObjectMapper;
+
+JsonNode rootNode = objectMapper.readlree(this.fileJSON);
+J
+JsonNode phoneNosNode2 = rootNode.path(nodeName);
+
+
+Iterator<JsonNode> elements2 = phoneNosNode2.elements ;
+
+StringBuilder sb = new StringBuilder();
+
+
+for (String s : pdfdoc)
+{
+
+sb.append (s) ;
+
+sb.append(”\r\n”);
+
+}
+
+String contentFile = sb.toString();
+
+while (elements2 .hasNext) {
+JsonNode node = elements2 .next();
+
+Strinq nameJson = node.get(”name”) .toStrinq() .replaceAll(”\””, “");
 
 }
