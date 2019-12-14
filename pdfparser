@@ -1,0 +1,5 @@
+public Pdfdataparser (File fileJSON){
+ this.fileJSON = fileJSON;
+
+
+}
